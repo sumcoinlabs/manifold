@@ -40,55 +40,70 @@ export function PerpMarketExplainer(props: { className?: string }) {
             '!items-stretch text-left'
           )}
         >
-          <div>
-            <h2 className="text-primary-700 text-xl font-semibold">
-              How perpetual markets work
-            </h2>
-            <p className="text-ink-600 mt-1">
-              Perpetual markets let you take a leveraged long or short position
-              on a price or metric. Unlike a typical prediction market, they
-              have no scheduled expiry.
-            </p>
-          </div>
-
-          <ExplainerItem title="Oracle price">
-            This market uses Manifold's latest accepted update from the source
-            shown below the chart. Long positions benefit when the value rises;
-            short positions benefit when it falls. Oracle updates can lag the
-            source.
-          </ExplainerItem>
-
-          <ExplainerItem title="Leverage and liquidation">
-            Leverage multiplies both gains and losses. For example, M$100 at 5×
-            gives M$500 of exposure. If the oracle reaches your liquidation
-            price, your position closes and you can lose all the margin you
-            posted. Profitable positions may also be auto-deleveraged if market
-            backing becomes insufficient.
-          </ExplainerItem>
-
-          <ExplainerItem title="Funding while you hold">
-            At each funding interval, the more crowded side pays the other side.
-            Funding can reduce or increase your margin; the current rate and
-            next funding time are shown above the chart.
-          </ExplainerItem>
-
-          <ExplainerItem title="No expiry">
-            Your position stays open until you close it, it is liquidated or
-            auto-deleveraged, or Manifold settles the market.
-          </ExplainerItem>
-
-          <ExplainerItem title="Stale feeds">
-            If the oracle is stale or unavailable, opening and closing pause
-            until a fresh, valid update arrives.
-          </ExplainerItem>
-
-          <div className="border-primary-200 bg-primary-50 text-ink-700 dark:border-primary-800 dark:bg-primary-900/20 rounded-md border p-3 text-sm">
-            <span className="font-semibold">League scoring:</span> For now,
-            perpetual-market profit and loss appear in your portfolio but do not
-            count toward league standings.
-          </div>
+          <PerpExplainerContent />
         </Col>
       </Modal>
+    </>
+  )
+}
+
+/**
+ * The explainer body, shared by the market-page modal and the /perps hub so
+ * the two can't drift. Renders as a flex column's children — put it inside
+ * a Col with the gap you want.
+ */
+export function PerpExplainerContent(props: { hideHeading?: boolean }) {
+  const { hideHeading } = props
+  return (
+    <>
+      <div>
+        {!hideHeading && (
+          <h2 className="text-primary-700 text-xl font-semibold">
+            How perpetual markets work
+          </h2>
+        )}
+        <p className={clsx('text-ink-600', !hideHeading && 'mt-1')}>
+          Perpetual markets let you take a leveraged long or short position on a
+          price or metric. Unlike a typical prediction market, they have no
+          scheduled expiry.
+        </p>
+      </div>
+
+      <ExplainerItem title="Oracle price">
+        This market uses Manifold's latest accepted update from the source shown
+        below the chart. Long positions benefit when the value rises; short
+        positions benefit when it falls. Oracle updates can lag the source.
+      </ExplainerItem>
+
+      <ExplainerItem title="Leverage and liquidation">
+        Leverage multiplies both gains and losses. For example, M$100 at 5×
+        gives M$500 of exposure. If the oracle reaches your liquidation price,
+        your position closes and you can lose all the margin you posted.
+        Profitable positions may also be auto-deleveraged if market backing
+        becomes insufficient.
+      </ExplainerItem>
+
+      <ExplainerItem title="Funding while you hold">
+        At each funding interval, the more crowded side pays the other side.
+        Funding can reduce or increase your margin; the current rate and next
+        funding time are shown above the chart.
+      </ExplainerItem>
+
+      <ExplainerItem title="No expiry">
+        Your position stays open until you close it, it is liquidated or
+        auto-deleveraged, or Manifold settles the market.
+      </ExplainerItem>
+
+      <ExplainerItem title="Stale feeds">
+        If the oracle is stale or unavailable, opening and closing pause until a
+        fresh, valid update arrives.
+      </ExplainerItem>
+
+      <div className="border-primary-200 bg-primary-50 text-ink-700 dark:border-primary-800 dark:bg-primary-900/20 rounded-md border p-3 text-sm">
+        <span className="font-semibold">League scoring:</span> For now,
+        perpetual-market profit and loss appear in your portfolio but do not
+        count toward league standings.
+      </div>
     </>
   )
 }
