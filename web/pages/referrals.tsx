@@ -82,7 +82,7 @@ export default function ReferralsPage() {
     <Page trackPageView={'referrals'} className="p-3">
       <SEO
         title="Refer a friend"
-        description={`Invite new users to Manifold and earn up to ${formatMoney(
+        description={`Invite new users to SAGE and earn up to ${formatMoney(
           REFERRAL_AMOUNT
         )} per friend who signs up, places a trade, and verifies their identity.`}
         url="/referrals"
@@ -90,7 +90,7 @@ export default function ReferralsPage() {
 
       <Col className="mx-auto w-full max-w-xl gap-6">
         {/* Hero Section */}
-        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-6 text-white shadow-lg sm:p-8">
+        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-500 via-purple-500 to-pink-500 p-6 text-white shadow-lg sm:p-8">
           {/* Background decorations */}
           <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-white/10 blur-2xl" />
           <div className="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-white/10 blur-2xl" />
@@ -104,7 +104,7 @@ export default function ReferralsPage() {
             </Row>
 
             <p className="mb-6 max-w-md text-white/90">
-              Invite friends to join Manifold and earn{' '}
+              Invite friends to join SAGE and earn{' '}
               <span className="font-semibold text-white">
                 {formatMoney(REFERRAL_BET_BONUS)}
               </span>{' '}
@@ -177,7 +177,7 @@ export default function ReferralsPage() {
             <HowItWorksStep
               number={2}
               title="Friend signs up"
-              description="Your friend creates a Manifold account using your link."
+              description="Your friend creates a SAGE account using your link."
             />
             <HowItWorksStep
               number={3}
@@ -276,7 +276,7 @@ function ReferralsReducedBanner({ isDenied }: { isDenied: boolean }) {
               Identity verification was unsuccessful, so you earn a reduced 0.2x
               referral bonus. Subscribe to{' '}
               <Link href="/membership" className="font-semibold underline">
-                Manifold Plus
+                SAGE Plus
               </Link>{' '}
               to earn the full amount, or email{' '}
               <a
@@ -306,7 +306,7 @@ function ReferralsReducedBanner({ isDenied }: { isDenied: boolean }) {
               You earn a reduced 0.2x referral bonus right now. Verify your
               identity or subscribe to{' '}
               <Link href="/membership" className="font-semibold underline">
-                Manifold Plus
+                SAGE Plus
               </Link>{' '}
               to earn the full {formatMoney(REFERRAL_BET_BONUS)} +{' '}
               {formatMoney(REFERRAL_VERIFY_BONUS)} per friend.
@@ -417,7 +417,7 @@ function ReferralsList(props: {
                     REFERRAL_VERIFY_BONUS
                   )} more when they do.`}
                 >
-                  <span className="cursor-default rounded-full bg-indigo-100 px-1.5 py-0.5 text-[10px] font-semibold text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300">
+                  <span className="cursor-default rounded-full bg-primary-100 px-1.5 py-0.5 text-[10px] font-semibold text-primary-700 dark:bg-primary-900/40 dark:text-primary-300">
                     Verify pending
                   </span>
                 </Tooltip>

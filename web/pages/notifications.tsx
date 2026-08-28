@@ -70,7 +70,7 @@ export default function NotificationsPage() {
       <div className="w-full">
         {shouldShowBanner && <NotificationsAppBanner />}
         <Title className="hidden lg:block">Notifications</Title>
-        <SEO title="Notifications" description="Manifold user notifications" />
+        <SEO title="Notifications" description="SAGE user notifications" />
         {privateUser && user && router.isReady ? (
           <NotificationsContent
             user={user}
@@ -339,7 +339,7 @@ export function NotificationsList(props: {
   return (
     <Col className="gap-2">
       {pinnedNotifications && pinnedNotifications.length > 0 && (
-        <Col className="gap-1 rounded-md border-2 border-indigo-500 p-2">
+        <Col className="gap-1 rounded-md border-2 border-primary-500 p-2">
           <Row
             className={clsx(
               'bg-primary-100',
@@ -465,7 +465,7 @@ function NotificationGroupItem(props: {
               {notifications[0].sourceUserName}
             </>
           ) : onboardingNotifs ? (
-            <>Welcome to Manifold!</>
+            <>Welcome to SAGE!</>
           ) : questNotifs ? (
             <>
               {notifications.length}{' '}

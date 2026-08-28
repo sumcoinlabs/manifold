@@ -536,7 +536,7 @@ export function LoansModal(props: {
             </Col>
           ) : (
             <Col className="items-center gap-4 py-4 text-center">
-              <div className="rounded-full bg-indigo-100 p-4 dark:bg-indigo-900/30">
+              <div className="rounded-full bg-primary-100 p-4 dark:bg-primary-900/30">
                 <span className="text-4xl">🔒</span>
               </div>
               <Col className="gap-2">
@@ -544,7 +544,7 @@ export function LoansModal(props: {
                   Upgrade to unlock margin loans
                 </h3>
                 <p className="text-ink-600 max-w-sm text-sm">
-                  Margin loans are available to all Manifold members. Upgrade to
+                  Margin loans are available to all SAGE members. Upgrade to
                   borrow against your positions and leverage your trading.
                 </p>
               </Col>

@@ -19,7 +19,7 @@ const ORDER_STATUS_COLORS: Record<string, string> = {
   CREATED: 'bg-gray-100 text-gray-800',
   PENDING_FULFILLMENT: 'bg-yellow-100 text-yellow-800',
   COMPLETED: 'bg-blue-100 text-blue-800',
-  SHIPPED: 'bg-indigo-100 text-indigo-800',
+  SHIPPED: 'bg-primary-100 text-primary-800',
   CANCELLED: 'bg-red-100 text-red-800',
   FAILED: 'bg-red-100 text-red-800',
   REFUNDED: 'bg-gray-100 text-gray-800',
@@ -497,7 +497,7 @@ function OrderRow(props: {
           {order.printfulOrderId ?? '—'}
         </div>
         <div>
-          <span className="text-ink-500">Manifold:</span>{' '}
+          <span className="text-ink-500">SAGE:</span>{' '}
           {order.txnId ? `manifold-${order.txnId}` : '—'}
         </div>
       </td>

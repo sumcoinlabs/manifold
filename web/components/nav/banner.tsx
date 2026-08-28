@@ -135,7 +135,7 @@ export function DowntimeBanner() {
   if (!maintainanceBannerEnabled) return null
   return (
     <Banner className=" bg-primary-100 hover:bg-primary-200 dark:text-primary-800 text-primary-700  hover:text-primary-900 items-center py-2  transition-colors">
-      ⚠️ Manifold will be down at 9PM PT for about 2 hours, as we upgrade our
+      ⚠️ SAGE will be down at 9PM PT for about 2 hours, as we upgrade our
       financial infrastructure.
     </Banner>
   )
@@ -147,7 +147,7 @@ export function WatchPartyBanner() {
       className="border-primary-300 from-primary-100 to-primary-200 my-2 border bg-gradient-to-b py-2"
       link="/tv"
     >
-      🇺🇸 Join the presidential debate watch party on Manifold TV! 🇺🇸
+      🇺🇸 Join the presidential debate watch party on SAGE TV! 🇺🇸
     </Banner>
   )
 }
@@ -183,7 +183,7 @@ export function StateOfTheUnion2026Banner() {
         <span className="text-lg">🇺🇸</span>
         <div>
           <span className="font-semibold">State of the Union watch party</span>{' '}
-          on Manifold TV tonight at{' '}
+          on SAGE TV tonight at{' '}
           {new Date('2026-02-24T21:00:00-05:00').toLocaleString(undefined, {
             hour: 'numeric',
           })}
@@ -274,7 +274,7 @@ export const CyberMondayBanner = () => {
   if (!showBanner) return null
   return (
     <Banner
-      className="items-center bg-gradient-to-r from-blue-950 via-indigo-900 to-violet-950 py-3 transition-colors"
+      className="items-center bg-gradient-to-r from-blue-950 via-primary-900 to-violet-950 py-3 transition-colors"
       link="/add-funds"
       target="_self"
       setShowBanner={hideBanner}
@@ -343,7 +343,7 @@ export const PrizeDrawingBanner = () => {
   if (!showBanner) return null
   return (
     <Banner
-      className="items-center bg-gradient-to-r from-amber-100 to-indigo-100 py-2 transition-colors hover:from-amber-200 hover:to-indigo-200 dark:from-amber-900/30 dark:to-indigo-900/30 dark:hover:from-amber-900/50 dark:hover:to-indigo-900/50"
+      className="items-center bg-gradient-to-r from-amber-100 to-primary-100 py-2 transition-colors hover:from-amber-200 hover:to-primary-200 dark:from-amber-900/30 dark:to-primary-900/30 dark:hover:from-amber-900/50 dark:hover:to-primary-900/50"
       link="/prize"
       target="_self"
       setShowBanner={hideBanner}
@@ -392,7 +392,7 @@ export const PrizeDrawing2Banner = () => {
   if (!showBanner) return null
   return (
     <Banner
-      className="items-center bg-gradient-to-r from-amber-100 via-yellow-100 to-indigo-100 py-2 transition-colors hover:from-amber-200 hover:via-yellow-200 hover:to-indigo-200 dark:from-amber-900/30 dark:via-yellow-900/30 dark:to-indigo-900/30 dark:hover:from-amber-900/50 dark:hover:via-yellow-900/50 dark:hover:to-emerald-900/50"
+      className="items-center bg-gradient-to-r from-amber-100 via-yellow-100 to-primary-100 py-2 transition-colors hover:from-amber-200 hover:via-yellow-200 hover:to-primary-200 dark:from-amber-900/30 dark:via-yellow-900/30 dark:to-primary-900/30 dark:hover:from-amber-900/50 dark:hover:via-yellow-900/50 dark:hover:to-emerald-900/50"
       link="/prize/2"
       target="_self"
       setShowBanner={hideBanner}

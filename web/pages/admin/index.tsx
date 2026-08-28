@@ -57,7 +57,7 @@ export default function AdminPage() {
             setOn={setTogglesEnabled}
             disabled={false}
           />
-          <span>Mana trading: {manaStatus ? 'Enabled' : 'Disabled'}</span>
+          <span>Sumtoshi's trading: {manaStatus ? 'Enabled' : 'Disabled'}</span>
           <ShortToggle
             on={manaStatus}
             setOn={() => toggleStatus('MANA')}
@@ -121,7 +121,7 @@ export default function AdminPage() {
           >
             <p>Are you sure you want to create new sports markets?</p>
             <p>
-              Make sure you are logged into the Manifold account and have
+              Make sure you are logged into the SAGE account and have
               ~50,000 mana.
             </p>
           </ConfirmationButton>

@@ -716,7 +716,7 @@ function ManaSupplyTab(props: {
               <>
                 &Delta; mana_supply_stats.total_value
                 <br />
-                minus net sum txns to or from Manifold
+                minus net sum txns to or from SAGE
               </>
             }
           />
@@ -729,7 +729,7 @@ function ManaSupplyTab(props: {
       <Spacer h={8} />
       <Title>Active Balances</Title>
       <p className="text-ink-500">
-        Sum of mana balances held by users who were active in the last 30 days.
+        Sum of Sumtoshi's balances held by users who were active in the last 30 days.
       </p>
       {activeUserManaStats.length > 0 && (
         <DailyChart
@@ -740,10 +740,10 @@ function ManaSupplyTab(props: {
         />
       )}
       <Spacer h={8} />
-      <Title>Transactions from Manifold</Title>
+      <Title>Transactions from SAGE</Title>
       <BonusSummary txnSummaryStats={fromBankSummaryMana} days={days} />
       <Spacer h={8} />
-      <Title>Transactions to Manifold</Title>
+      <Title>Transactions to SAGE</Title>
       <span className="text-ink-500">(Ignores mana purchases)</span>
       <BonusSummary txnSummaryStats={toBankSummaryMana} days={days} />
     </Col>
@@ -968,7 +968,7 @@ function PurchasesTab(props: { shopStats?: ShopStats }) {
 
   const tierColors: Record<string, string> = {
     basic: 'text-gray-500',
-    plus: 'text-indigo-500',
+    plus: 'text-primary-500',
     premium: 'text-amber-500',
   }
 

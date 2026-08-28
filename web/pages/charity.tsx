@@ -377,8 +377,8 @@ export default function CharityGiveawayPage(props: { giveawayNum?: number }) {
     return (
       <Page trackPageView={'charity giveaway'}>
         <SEO
-          title="Manifold Charity Giveaway"
-          description="Enter the Manifold Charity Giveaway to help your favorite charity win a cash donation from Manifold."
+          title="SAGE Charity Giveaway"
+          description="Enter the SAGE Charity Giveaway to help your favorite charity win a cash donation from SAGE."
           url="/charity"
         />
         <Col className="mx-auto w-full max-w-3xl items-center justify-center gap-6 px-4 py-20">
@@ -419,10 +419,10 @@ export default function CharityGiveawayPage(props: { giveawayNum?: number }) {
       <SEO
         title={
           giveaway.giveawayNum
-            ? `Manifold Charity Giveaway #${giveaway.giveawayNum}`
-            : 'Manifold Charity Giveaway'
+            ? `SAGE Charity Giveaway #${giveaway.giveawayNum}`
+            : 'SAGE Charity Giveaway'
         }
-        description={`Help your favorite charity win $${giveaway.prizeAmountUsd.toLocaleString()} from Manifold. Convert mana into entries to boost their odds.`}
+        description={`Help your favorite charity win $${giveaway.prizeAmountUsd.toLocaleString()} from SAGE. Convert mana into entries to boost their odds.`}
         url={giveawayNum ? `/charity/${giveaway.giveawayNum}` : '/charity'}
       />
 
@@ -434,7 +434,7 @@ export default function CharityGiveawayPage(props: { giveawayNum?: number }) {
             <Row className="items-center gap-3">
               <FaHeart className="h-8 w-8 text-emerald-500" />
               <h1 className="text-ink-900 text-3xl font-bold tracking-tight">
-                Manifold Charity Giveaway
+                SAGE Charity Giveaway
               </h1>
             </Row>
             <div className="flex flex-wrap items-center gap-2 sm:ml-auto">
@@ -482,7 +482,7 @@ export default function CharityGiveawayPage(props: { giveawayNum?: number }) {
             </div>
           </div>
           <p className="text-ink-600 text-lg leading-relaxed">
-            Manifold is giving ${giveaway.prizeAmountUsd.toLocaleString()} to
+            SAGE is giving ${giveaway.prizeAmountUsd.toLocaleString()} to
             charity—you decide which one. Convert mana into entries to boost a
             charity's odds, and when the giveaway ends, we'll draw one lucky
             entry to determine the winning charity.
@@ -560,7 +560,7 @@ export default function CharityGiveawayPage(props: { giveawayNum?: number }) {
               Admins can't participate
             </h3>
             <p className="text-ink-600 mt-1 text-sm">
-              To keep the giveaway fair, Manifold admins aren't eligible to get
+              To keep the giveaway fair, SAGE admins aren't eligible to get
               entries.
             </p>
           </div>
@@ -790,7 +790,7 @@ function StatCard(props: {
     teal: 'text-teal-600 dark:text-teal-400',
     amber: 'text-amber-600 dark:text-amber-400',
     red: 'text-red-500 dark:text-red-400',
-    indigo: 'text-indigo-600 dark:text-indigo-400',
+    indigo: 'text-primary-600 dark:text-primary-400',
     violet: 'text-violet-600 dark:text-violet-400',
   }
 
@@ -882,7 +882,7 @@ function PurchaseForm(props: {
             className={clsx(
               'overflow-hidden rounded-lg border transition-all',
               isHovering
-                ? 'border-indigo-300 bg-indigo-50 dark:border-indigo-700 dark:bg-indigo-950/30'
+                ? 'border-primary-300 bg-primary-50 dark:border-primary-700 dark:bg-primary-950/30'
                 : 'border-canvas-100 bg-canvas-50'
             )}
           >
@@ -949,7 +949,7 @@ function PurchaseForm(props: {
                     className={clsx(
                       'rounded-md px-3 py-1.5 text-xs font-medium transition-colors',
                       manaAmount === n
-                        ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/50 dark:text-indigo-300'
+                        ? 'bg-primary-100 text-primary-700 dark:bg-primary-900/50 dark:text-primary-300'
                         : 'text-ink-600 hover:bg-canvas-100'
                     )}
                   >
@@ -995,7 +995,7 @@ function SignInPrompt(props: { previewCharityId: string }) {
 
       <Col className="items-center gap-4 p-6">
         {previewCharity ? (
-          <Row className="w-full gap-3 rounded-lg border border-indigo-200 bg-indigo-50 p-3 dark:border-indigo-700 dark:bg-indigo-950/30">
+          <Row className="w-full gap-3 rounded-lg border border-primary-200 bg-primary-50 p-3 dark:border-primary-700 dark:bg-primary-950/30">
             {previewCharity.photo && (
               <img
                 src={previewCharity.photo}
@@ -1494,10 +1494,10 @@ function ProvablyFairBanner(props: {
       <Row className="items-center justify-center">
         <button
           onClick={() => setIsModalOpen(true)}
-          className="dark:from-indigo-400/15 dark:via-purple-400/15 dark:to-pink-400/15 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 px-4 py-2 ring-1 ring-indigo-500/20 transition-all hover:ring-indigo-500/40 dark:ring-indigo-400/25 dark:hover:ring-indigo-400/40"
+          className="dark:from-primary-400/15 dark:via-purple-400/15 dark:to-pink-400/15 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary-500/10 via-purple-500/10 to-pink-500/10 px-4 py-2 ring-1 ring-primary-500/20 transition-all hover:ring-primary-500/40 dark:ring-primary-400/25 dark:hover:ring-primary-400/40"
         >
           <span className="text-base">⚖️</span>
-          <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-sm font-semibold text-transparent dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400">
+          <span className="bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 bg-clip-text text-sm font-semibold text-transparent dark:from-primary-400 dark:via-purple-400 dark:to-pink-400">
             Provably fair
           </span>
         </button>

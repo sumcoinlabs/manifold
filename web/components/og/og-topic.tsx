@@ -15,7 +15,7 @@ export function OgTopic(props: OgTopicProps) {
 
   return (
     <div
-      className="relative flex h-full w-full flex-col items-stretch bg-indigo-700 px-6 py-4"
+      className="relative flex h-full w-full flex-col items-stretch bg-primary-700 px-6 py-4"
       style={{
         backgroundImage: 'linear-gradient(to bottom, #4338ca, #818cf8)',
       }}
@@ -36,7 +36,7 @@ export function OgTopic(props: OgTopicProps) {
       )}
 
       <div className="mt-auto flex w-full flex-row items-center justify-between text-lg">
-        {/* Manifold logo */}
+        {/* SAGE logo */}
         <div className="flex items-center pb-1">
           <Logo className="h-12 w-12" stroke="white" />
 
@@ -44,7 +44,7 @@ export function OgTopic(props: OgTopicProps) {
             className="text-3xl font-thin uppercase text-white"
             style={{ fontFamily: 'var(--font-main), Figtree-light' }}
           >
-            Manifold
+            SAGE
           </span>
         </div>
 

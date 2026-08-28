@@ -160,7 +160,7 @@ export default function SportsAdminPage() {
   async function suggestTags() {
     setSuggesting(true)
     try {
-      // Reuse Manifold's topic suggester (embedding similarity) on a
+      // Reuse SAGE's topic suggester (embedding similarity) on a
       // representative match question for this tournament.
       const sample = `${sampleTeams.home} vs ${sampleTeams.away} [${tournament.shortLabel}]`
       const res = (await getSimilarGroupsToContract({ question: sample })) as {
@@ -757,7 +757,7 @@ export default function SportsAdminPage() {
                 Liquidity tiers (mana)
               </label>
               <p className="text-ink-400 text-xs">
-                Valid Manifold tiers: 100 · 1,000 · 10,000 · 100,000
+                Valid SAGE tiers: 100 · 1,000 · 10,000 · 100,000
               </p>
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {Object.entries(STAGE_LABELS).map(([code, label]) => (
@@ -1069,7 +1069,7 @@ export default function SportsAdminPage() {
                   'Needs attention': 'NEEDS_ATTENTION',
                 }}
                 setChoice={(v) => setMarketFilter(v as string)}
-                color="indigo-dark"
+                color="primary-dark"
               />
               <Button size="sm" color="gray-outline" onClick={fetchMarkets}>
                 {marketsLoading ? 'Loading…' : 'Refresh'}

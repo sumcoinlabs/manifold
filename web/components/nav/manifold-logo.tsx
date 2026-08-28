@@ -2,7 +2,6 @@ import Link from 'next/link'
 import clsx from 'clsx'
 import Image from 'next/image'
 import { useUser } from 'web/hooks/use-user'
-import { ENV } from 'common/envs/constants'
 import { isAprilFools } from 'common/util/time'
 import { LogoIcon } from '../icons/logo-icon'
 
@@ -37,7 +36,7 @@ export function ManifoldLogo(props: { className?: string; twoLine?: boolean }) {
       <Link
         href={user ? '/home' : '/'}
         className={clsx(
-          'group flex w-full flex-row items-center gap-0.5 px-1 outline-none',
+          'group flex w-full flex-row items-center gap-2 outline-none',
           className
         )}
       >
@@ -45,14 +44,16 @@ export function ManifoldLogo(props: { className?: string; twoLine?: boolean }) {
           <JesterHatLogoSvg className="h-10 w-10 shrink-0 transition-transform group-hover:rotate-12" />
         ) : (
           <LogoIcon
-            className="h-10 w-10 shrink-0 stroke-indigo-700 transition-transform group-hover:rotate-12 dark:stroke-white"
+            className="h-11 w-11 shrink-0 transition-transform duration-300 group-hover:scale-105"
             aria-hidden
           />
         )}
         <div
-          className={clsx('text-xl font-thin text-indigo-700 dark:text-white')}
+          className={clsx(
+            'text-[1.05rem] font-bold tracking-[0.18em] text-[#91caff]'
+          )}
         >
-          {aprilFools ? 'MANIFOOLD' : ENV == 'DEV' ? 'DEVIFOLD' : 'MANIFOLD'}
+          {'SAGE'}
         </div>
       </Link>
     </div>

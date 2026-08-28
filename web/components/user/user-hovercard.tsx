@@ -217,7 +217,7 @@ const FetchUserHovercardContent = forwardRef(
           !background && 'bg-canvas-0 text-ink-1000',
           background === 'royalty' && 'text-amber-50',
           background === 'mana-printer' && 'text-emerald-50',
-          background === 'oracle' && 'text-indigo-50',
+          background === 'oracle' && 'text-primary-50',
           background === 'trading-floor' && 'text-green-50',
           background === 'champions-legacy' && 'text-amber-50',
           hasDarkBackground && 'divide-white/20',
@@ -340,7 +340,7 @@ const FetchUserHovercardContent = forwardRef(
 const APRIL_FOOLS_AD_COPY = [
   'Hot singles in your probability space',
   "You won't BELIEVE this market's resolution",
-  'Manifold Pro: because your predictions deserve better (and so do we)',
+  'SAGE Pro: because your predictions deserve better (and so do we)',
 ]
 
 function FakeAdBanner({ userId }: { userId: string }) {

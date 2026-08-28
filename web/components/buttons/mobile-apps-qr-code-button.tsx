@@ -12,7 +12,7 @@ export const MobileAppsQRCodeButton = () => {
   return (
     <>
       <Button
-        color="indigo-outline"
+        color="primary-outline"
         onClick={() => {
           setIsModalOpen(true)
           track('banner click get app')
@@ -37,7 +37,7 @@ export const MobileAppsQRCodeDialog = (props: {
     <Modal open={isModalOpen} setOpen={setIsModalOpen} size="sm">
       <Col className={'bg-canvas-0 rounded-2xl p-4'}>
         <span className={'text-primary-700 py-2 text-2xl'}>
-          Get the Manifold app
+          Get the SAGE app
         </span>
         <span className={'py-2 '}>Scan this QR code to download the app.</span>
         <Tabs
